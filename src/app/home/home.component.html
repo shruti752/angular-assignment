@@ -1,0 +1,32 @@
+<div  matSort (matSortChange)="sortData($event)" class="card" >
+    <div class="card-body">
+        <div mat-sort-header="departure" class="card-text">DEPARTURE</div>
+        <div mat-sort-header="duration" class="card-text">DURATION</div>
+        <div  class="card-text">ARRIVAL</div>
+        <div style="color: blue;" mat-sort-header="prize" class="card-text">PRICE <span class="airways-name">
+            <i class="fa fa-arrow-up"></i>
+        </span></div>
+    </div>
+</div>
+<div class="card" *ngFor='let post of sortedData'>
+    <div  class="card-body"  >
+        <img class="arln-logo logo1" src="{{post.logo}}" alt="Vistara">
+        <p><span class="airways-name ">{{post.flightName}}</span></p>
+    </div>
+    <div class="card-body">
+        <p><span class="airways-name">{{post.from}}</span></p>
+        <span class="airways-name">
+            <i class="fa fa-arrow-right"></i>
+        </span>
+        <p><span class="airways-name">{{post.to}}</span></p>
+    </div>
+    <div class="card-body">
+        <p><span class="card-text">{{post.departure}}</span></p>
+        <p><span class="card-text">{{post.duration}}</span></p>
+        <p><span class="card-text">{{post.arrival}}</span></p>
+        <p><span class="card-text">{{post.prize}} <button type="button" class="btn btn-warning">book</button> </span>
+        </p>
+    </div>
+</div>
+<!-- <app-blog *ngFor='let post of blogAttributes' [post]="post">
+</app-blog> -->
