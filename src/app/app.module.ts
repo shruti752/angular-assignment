@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { fakeBackendProvider, JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { fakeBackendProvider,  } from './_helpers';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
@@ -31,8 +31,6 @@ import { MaterialModule } from './material/material.module';
   ],
   providers: [
     fakeBackendProvider,
-    // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
