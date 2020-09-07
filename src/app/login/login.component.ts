@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private authenticationService: AuthenticationService
   ) { 
     if (this.authenticationService.currentUserValue) { 
-      this.router.navigate(['/']);
+      this.router.navigate(['/loginx`x']);
   }
 }
 

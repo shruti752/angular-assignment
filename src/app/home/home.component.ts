@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { BlogAttribute } from '../blog-attribute';
 import { MatSort, Sort } from '@angular/material/sort';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../_services';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,13 @@ import { MatSort, Sort } from '@angular/material/sort';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  currentUser: any;
   @Input() post:BlogAttribute;
   blogAttributes:BlogAttribute[] = [];
   sortedData:BlogAttribute[];
-  constructor() {
+  constructor( private router: Router,
+    private authenticationService: AuthenticationService) {
+
     this.sortedData = this.blogAttributes.slice();
    }
    sortData(sort: Sort) {
