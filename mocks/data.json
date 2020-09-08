@@ -1,0 +1,35 @@
+{
+    "data":
+    [
+        {
+            "logo": "../../assets/images/download.jpg",
+            "from": "DEL New delhi,india",
+            "flightName":"vistara",
+            "departure":"16:40",
+            "duration":"02h:23min",
+            "to": "PAT Patna,india",
+            "arrival":"20:50",
+            "prize":"6,253"
+        },
+        {
+            "logo": "../../assets/images/images.jpg",
+            "from": "PUN Pune,india",
+            "flightName":"spiceje",
+            "departure":"16:50",
+            "duration":"02h:00min",
+            "to": "DEL New delhi,india",
+            "arrival":"18:50",
+            "prize":"4,293"
+        },
+        {
+            "logo": "../../assets/images/images.jpg",
+            "from": "PAT Patna,india",
+            "flightName":"spiceje",
+            "departure":"21:10",
+            "duration":"01h:45min",
+            "to": "DEL New delhi,india",
+            "arrival":"22:50",
+            "prize":"9,765"
+        }
+    ]
+}
