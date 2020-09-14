@@ -15,17 +15,17 @@ export class HomeComponent implements OnInit {
   @Input() post:DataService;
   blogAttributes:BlogAttribute[] = [];
   sortedData:BlogAttribute[];
-  allData: Object;
+  allData: any;
 
 
   constructor( private router: Router,
     private dataService:DataService,
     private authenticationService: AuthenticationService) 
     {
-         this.sortedData = this.blogAttributes.slice();
+         this.allData = this.blogAttributes.slice();
     }
    sortData(sort: Sort) {
-    const data = this.sortedData.slice();
+    const data = this.allData.slice();
     if (!sort.active || sort.direction === '') {
       this.allData = data;
       return;
